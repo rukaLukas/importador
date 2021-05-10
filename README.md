@@ -12,4 +12,6 @@ Abaixo estão os serviços e suas portas que estarão disponíveis após docker 
 - **php** - `:8001`
 - **elasticsearch** - `:5432`
 
+** OBS: deve ser executado em paralelo com o projeto [knewin_appapi](https://github.com/rukaLukas/knwein_appapi) para ter acesso ao banco que possui os dados a serem exportados.
+
 A configuraão da conexão com o banco de dados relacional qual realizará a consulta para extração dos dados é feita no arquivo [database/database.ini](database/database.ini)
