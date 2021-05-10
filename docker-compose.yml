@@ -1,0 +1,33 @@
+version: '3.8'
+
+networks:
+  importador:
+  knwein_app-shared:
+    external: true
+
+services:
+  www:
+    build:
+      context: .
+      dockerfile: Dockerfile    
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - 8001:80
+    depends_on:      
+      - elasticsearch
+    networks:
+      - importador
+      - knwein_app-shared
+
+  elasticsearch:
+    image: elasticsearch:7.12.1 
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node   
+    volumes:
+      - ./storage/elasticsearch:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    networks:
+      - importador      
