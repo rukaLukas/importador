@@ -10,7 +10,7 @@ No terminal de comandos, navegue até o diretório qual você clonou o projeto e
 Abaixo estão os serviços e suas portas que estarão disponíveis após docker subir os containers
 
 - **php** - `:8001`
-- **elasticsearch** - `:5432`
+- **elasticsearch** - `:9200`
 
 ** OBS: deve ser executado em paralelo com o projeto [knewin_appapi](https://github.com/rukaLukas/knwein_appapi) para ter acesso ao banco que possui os dados a serem exportados.
 
