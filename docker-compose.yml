@@ -18,7 +18,7 @@ services:
       - elasticsearch
     networks:
       - importador
-      - knwein_app-shared
+      - app-shared
 
   elasticsearch:
     image: elasticsearch:7.12.1 
