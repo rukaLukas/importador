@@ -2,7 +2,7 @@ version: '3.8'
 
 networks:
   importador:
-  knwein_app-shared:
+  app-shared:
     external: true
 
 services:
